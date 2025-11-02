@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sahara | Emotional Wellness Platform</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Poppins', sans-serif; color: #333; background: #f8fafc; overflow-x: hidden; }
+
+    nav {
+      position: fixed; top: 0; width: 100%; background: rgba(255,255,255,0.95);
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 10px 40px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+    .logo-container {
+      display: flex; align-items: center; gap: 10px; transition: transform 0.3s ease;
+    }
+    .logo-container img {
+      height: 55px; width: auto; object-fit: contain; transition: transform 0.3s ease, filter 0.3s ease;
+    }
+    .logo-container:hover img {
+      transform: scale(1.1); filter: brightness(1.1);
+    }
+    .logo-container span {
+      color: #7b2ff7; font-size: 1.5rem; font-weight: 700; letter-spacing: 1px;
+    }
+
+    nav ul { display: flex; list-style: none; }
+    nav li { margin-left: 25px; }
+    nav a { text-decoration: none; color: #333; font-weight: 600; transition: 0.3s; }
+    nav a:hover { color: #7b2ff7; }
+
+    header {
+      background: linear-gradient(135deg, #7b2ff7, #f107a3);
+      color: white; text-align: center; padding: 180px 20px 150px;
+      position: relative;
+    }
+    header::after {
+      content: "";
+      position: absolute; bottom: 0; left: 0; width: 100%; height: 100px;
+      background: white; clip-path: polygon(0 100%, 100% 100%, 100% 0);
+    }
+    header h1 { font-size: 3.5rem; margin-bottom: 10px; }
+    header p { font-size: 1.2rem; max-width: 600px; margin: 0 auto 30px; }
+    header a {
+      background: white; color: #7b2ff7; padding: 12px 25px;
+      border-radius: 30px; text-decoration: none; font-weight: 600;
+      transition: 0.3s;
+    }
+    header a:hover { background: #eaeaea; }
+
+    #login {
+      background: white; color: #333; padding: 60px 20px; margin-top: -60px;
+      text-align: center; position: relative; z-index: 10;
+    }
+    .login-box {
+      background: #fff; color: #333; max-width: 420px; margin: auto; padding: 40px 35px;
+      border-radius: 20px; box-shadow: 0 4px 25px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .login-box:hover { transform: translateY(-5px); box-shadow: 0 8px 30px rgba(0,0,0,0.15); }
+    .login-box h3 { margin-bottom: 20px; color: #7b2ff7; font-size: 1.5rem; }
+    .login-box input {
+      width: 100%; padding: 14px; margin: 10px 0; border-radius: 10px;
+      border: 1px solid #ccc; outline: none; font-size: 1rem;
+    }
+    .login-box button {
+      background: linear-gradient(135deg, #7b2ff7, #f107a3);
+      color: white; border: none; padding: 14px;
+      width: 100%; border-radius: 10px; cursor: pointer; font-size: 1rem;
+      transition: 0.3s;
+    }
+    .login-box button:hover { opacity: 0.9; }
+
+    section { padding: 80px 20px; text-align: center; max-width: 1000px; margin: auto; }
+    section h2 { font-size: 2rem; margin-bottom: 20px; color: #7b2ff7; }
+    section p { font-size: 1rem; line-height: 1.6; margin-bottom: 30px; }
+
+    .features, .impact, .future { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .card {
+      background: white; padding: 25px; border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: 0.3s; animation: fadeInUp 1s ease forwards;
+    }
+    .card:hover { transform: translateY(-5px); }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      background: #1f1f1f; color: white; text-align: center;
+      padding: 30px 10px; margin-top: 50px;
+    }
+    footer a { color: #f107a3; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#top" class="logo-container">
+      <img src="sahara.png" alt="Sahara Logo">
+      <span>Sahara</span>
+    </a>
+    <ul>
+      <li><a href="#login">Login</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#impact">Impact</a></li>
+      <li><a href="#future">Future</a></li>
+    </ul>
+  </nav>
+
+  <header id="top">
+    <h1>Welcome to Sahara</h1>
+    <p>Because every soul deserves support — connect, heal, and grow with our emotional wellness platform.</p>
+    <a href="#login">Login Now</a>
+  </header>
+
+  <section id="login">
+    <h2>Login to Your Account</h2>
+    <div class="login-box">
+      <h3>Welcome</h3>
+      <form action="choose.html" method="get">
+  <input type="email" placeholder="Email" required />
+  <input type="password" placeholder="Password" required />
+  <button type="submit">Login</button>
+</form>
+
+      <p style="margin-top:10px; font-size:0.9rem;">Don't have an account? <a href="#" style="color:#7b2ff7; text-decoration:none; font-weight:600;">Sign up</a></p>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Sahara</h2>
+    <p>
+      Sahara is a unified platform that connects individuals with trained listeners and communities,
+      provides wellness reminders, and encourages healthy online engagement.
+      We aim to bridge emotional gaps and promote inclusive mental well-being.
+    </p>
+  </section>
+
+  <section id="features">
+    <h2>Key Features</h2>
+    <div class="features">
+      <div class="card"><h3>Safe Digital Spaces</h3><p>Open, supportive, and moderated forums for emotional connection.</p></div>
+      <div class="card"><h3>AI + Human Support</h3><p>Hybrid care system combining real psychiatrists with AI for empathy-driven help.</p></div>
+      <div class="card"><h3>Mindfulness Tools</h3><p>Wellness reminders and activities to promote balance and focus.</p></div>
+    </div>
+  </section>
+
+  <section id="impact">
+    <h2>Impact & Benefits</h2>
+    <div class="impact">
+      <div class="card"><h3>Social</h3><p>Reduces loneliness and promotes kindness through genuine connections.</p></div>
+      <div class="card"><h3>Economic</h3><p>Affordable alternative to costly therapy via community-driven support.</p></div>
+      <div class="card"><h3>Psychological</h3><p>Encourages emotional stability, belonging, and mental wellness.</p></div>
+    </div>
+  </section>
+
+  <section id="future">
+    <h2>Future Scope</h2>
+    <div class="future">
+      <div class="card"><h3>AI-Powered Care</h3><p>Integrate emotional analytics for personalized guidance.</p></div>
+      <div class="card"><h3>Global Expansion</h3><p>Multilingual and inclusive for users across all regions.</p></div>
+      <div class="card"><h3>Wearable Integration</h3><p>Connect with smart devices for real-time mood tracking.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Sahara | Emotional Wellness Platform</p>
+    <p>Contact us: <a href="mailto:hello@sahara.com">hello@sahara.com</a></p>
+  </footer>
+
+</body>
+</html>
